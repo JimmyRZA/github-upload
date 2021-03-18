@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>withdrawal</title>
+</head>
+<body>
+<p> Amount requested, withdrawal successful</p>
+
+	<p>Account Type : <span th:text="${amountDetails.type}"> </span></p>
+	
+	<p>Account Number : <span th:text="${amountDetails.accountNumber}"></span></p>
+	
+	<p>Amount Required : <span th:text="${amountDetails.amount}"></span></p>
+	
+	<a href="home" class="btn btn-default">Back</a>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Transactional Account Balances</title>
+</head>
+<body>
+	<div>
+		<h4>Transactional Account Balances</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Account Number</th>
+					<th>Account Type</th>
+					<th>Account Balance</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="transAccBal : ${transactionAccBal}">
+					<td>
+					 <a th:href="@{/transactional/withdraw(accountNum=${transAccBal.clientAccountNumber},accountType=${transAccBal.accountTypeCode})}"
+							th:text="${transAccBal.clientAccountNumber}"></a>	
+					 </td>
+					<td th:text="${transAccBal.accountTypeCode}" ></td>
+					<td th:text="${transAccBal.displayBalance}" ></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<a href="home" class="btn btn-default">Back</a>
+</body>
+</html>

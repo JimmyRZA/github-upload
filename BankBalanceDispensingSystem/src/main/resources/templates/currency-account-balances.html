@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Currency Account Balances</title>
+</head>
+<body>
+	<div>
+		<h4>Currency Account Balances</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Account Number</th>
+					<th>Currency</th>
+					<th>Currency Balance</th>
+					<th>Conversion Rate</th>
+					<th>ZAR Amount</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="currAccBal : ${currencyAccountBalancesList}">
+					<td th:text="${currAccBal.accountNumber}"></td>
+					<td th:text="${currAccBal.currency}" ></td>
+					<td th:text="${currAccBal.currencyBalance}" ></td>
+					<td th:text="${currAccBal.conversionRate}" ></td>
+					<td th:text="${currAccBal.zarAmount}" ></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<a href="home" class="btn btn-default">Back</a>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Functions of the BankBalanceDispensingSystem project can be accessed via this link:
+http://localhost:8080/transactional/home
+which is the landing page for all functions.
+The transactional accounts balances are displayed with accounts as links that lead to the withdrawal screen
+
+The reports was a working in progress bit which was developed but wasn't not tested.
+
+The controller for reports is named: TransactionalAccountReportController.
+

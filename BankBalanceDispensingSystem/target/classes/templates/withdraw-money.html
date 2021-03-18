@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Draw From Account</title>
+</head>
+
+<body>
+	<h4>Draw From Account</h4>
+
+	<div class="container">
+		<form action="/transactional/dowithdraw" th:object="${amountDetails}" method="POST">
+		
+		<p> Type : <span th:text="${amountDetails.type}"  th:field="${amountDetails.type}" th:value="${amountDetails.type}"> </span></p>
+		
+		<p> Number : <span th:text="${amountDetails.accountNumber}" th:field="${amountDetails.accountNumber}"></span></p>
+		
+		<p> Required Amount </p>
+		<p>
+		<input type="text" placeholder="Required Amount" th:field="${amountDetails.amount}"  th:value="0"/>
+		</p>
+		
+		<button type="submit">Submit</button>
+		
+		</form>
+	</div>
+	
+</body>
+
+</html>
